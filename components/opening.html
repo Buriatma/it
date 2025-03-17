@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opening Hours</title>
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&family=Sora:wght@400;700&display=swap");
+
+        :root {
+            --inter: 'Inter', sans-serif;
+            --playfair: 'Playfair Display', serif;
+            --sora: 'Sora', sans-serif;
+            --text-color: #A0A0A6;
+            --body-bg: #0D0C1C;
+            --section-bg: #151429;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--inter);
+            background: var(--body-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .information {
+            padding: 100px 0;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .information__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--section-bg);
+            padding: 2rem 0;
+            transform: rotate(2deg);
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+            direction: rtl;
+        }
+
+        .information__content {
+            display: flex;
+            animation: Marque 50s linear infinite;
+            direction: ltr;
+        }
+
+        .single-information {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-right: 2rem;
+            white-space: nowrap;
+        }
+
+        .single-information .icon img {
+            width: 24px;
+            height: 24px;
+            animation: rotate 10s linear infinite;
+        }
+
+        .single-information h6 {
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .single-information h6 span {
+            background: linear-gradient(42deg, #E9F950 -1.07%, #55F4C4 -1.06%, #BAE906 104.1%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: var(--sora);
+        }
+
+        @keyframes Marque {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .single-information h6 {
+                font-size: 1rem;
+            }
+            
+            .single-information {
+                gap: 1rem;
+                margin-right: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="information">
+        <div class="information__wrapper">
+            <div class="information__content">
+                <!-- First Set -->
+                <div class="single-information">
+                    <div class="icon"><img src="../assets/img/animated-icon/star.png" alt="star"></div>
+                    <h6>Open Hours: <span>SUN - Mon</span>: 10am - 7pm, Sunday: 10am - 5pm, Last Sunday: <span>Closed</span></h6>
+                </div>
+                <div class="single-information">
+                    <div class="icon"><img src="../assets/img/animated-icon/star.png" alt="star"></div>
+                    <h6><span>Office:- </span>Office: 03, Hari Om Shagun, Sector: 20, Ulwe, Navi Mumbai, India</h6>
+                </div>
+                <div class="single-information">
+                    <div class="icon"><img src="../assets/img/animated-icon/star.png" alt="star"></div>
+                    <h6><span>Get in touch:- </span>Phone: +91-8976765350 / +91-8976765351</h6>
+                </div>
+                <div class="single-information">
+                    <div class="icon"><img src="../assets/img/animated-icon/star.png" alt="star"></div>
+                    <h6><span>Email:- </span>info@itethik.com</h6>
+                </div>
+
+                <!-- Second Set (Duplicate for seamless scrolling) -->
+                <div class="single-information">
+                    <div class="icon"><img src="../assets/img/animated-icon/star.png" alt="star"></div>
+                    <h6>Open Hours: <span>SUN - Mon</span>: 10am - 7pm, Sunday: 10am - 5pm, Last Sunday: <span>Closed</span></h6>
+                </div>
+                <div class="single-information">
+                    <div class="icon"><img src="../assets/img/animated-icon/star.png" alt="star"></div>
+                    <h6><span>Office:- </span>Office: 03, Hari Om Shagun, Sector: 20, Ulwe, Navi Mumbai, India</h6>
+                </div>
+                <div class="single-information">
+                    <div class="icon"><img src="../assets/img/animated-icon/star.png" alt="star"></div>
+                    <h6><span>Get in touch:- </span>Phone: +91-8976765350 / +91-8976765351</h6>
+                </div>
+                <div class="single-information">
+                    <div class="icon"><img src="../assets/img/animated-icon/star.png" alt="star"></div>
+                    <h6><span>Email:- </span>info@itethik.com</h6>
+                </div>
+
+                <!-- Third Set (Duplicate for seamless scrolling) -->
+                <div class="single-information">
+                    <div class="icon"><img src="../assets/img/animated-icon/star.png" alt="star"></div>
+                    <h6>Open Hours: <span>SUN - Mon</span>: 10am - 7pm, Sunday: 10am - 5pm, Last Sunday: <span>Closed</span></h6>
+                </div>
+                <div class="single-information">
+                    <div class="icon"><img src="../assets/img/animated-icon/star.png" alt="star"></div>
+                    <h6><span>Office:- </span>Office: 03, Hari Om Shagun, Sector: 20, Ulwe, Navi Mumbai, India</h6>
+                </div>
+                <div class="single-information">
+                    <div class="icon"><img src="../assets/img/animated-icon/star.png" alt="star"></div>
+                    <h6><span>Get in touch:- </span>Phone: +91-8976765350 / +91-8976765351</h6>
+                </div>
+                <div class="single-information">
+                    <div class="icon"><img src="../assets/img/animated-icon/star.png" alt="star"></div>
+                    <h6><span>Email:- </span>info@itethik.com</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Add pause on hover functionality
+        const content = document.querySelector('.information__content');
+        
+        content.addEventListener('mouseenter', () => {
+            content.style.animationPlayState = 'paused';
+        });
+        
+        content.addEventListener('mouseleave', () => {
+            content.style.animationPlayState = 'running';
+        });
+    </script>
+</body>
+</html>

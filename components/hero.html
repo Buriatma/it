@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/kursor.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&family=Sora:wght@400;700&display=swap");
+        
+        :root {
+            --inter: 'Inter', sans-serif;
+            --playfair: 'Playfair Display', serif;
+            --sora: 'Sora', sans-serif;
+            --font-awesome: "Font Awesome 6 Pro";
+            --text-color: #A0A0A6;
+            --bc: #A0A0A645;
+            --line-height: 25px;
+            --body-font-size: 16px;
+            --body-bg: #0D0C1C;
+            --page-bg: #131225;
+            --btn-bg: #68F2A0;
+            --blank-color: #D1F831;
+            --blank: #0E1627;
+            --style-two: #15202E;
+            --style-two-color: #2B85FF;
+            --style-three: #0E1722;
+            --Linear-01: linear-gradient(42deg, #E9F950 -1.07%, #55F4C4 -1.06%, #BAE906 104.1%);
+            --g-4: linear-gradient(99deg, #D1099F 0%, #8A1128 98.57%);
+        }
+        
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--inter);
+            color: var(--text-color);
+            line-height: var(--line-height);
+            font-size: var(--body-font-size);
+            font-weight: 400;
+            background: var(--body-bg);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Hero Styles */
+        .hero {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        
+        .hero__vector img:nth-child(1) {
+            position: absolute;
+            left: 0;
+            animation: top 3s linear infinite;
+        }
+        
+        .hero__vector img:nth-child(2) {
+            position: absolute;
+            right: 15%;
+            animation: roundAnim 10s linear infinite;
+        }
+        
+        @media screen and (max-width: 1200px) {
+            .hero__vector img:nth-child(2) {
+                top: 0%;
+                right: 0;
+            }
+        }
+        
+        @media screen and (max-width: 992px) {
+            .hero__vector img:nth-child(2) {
+                top: -2%;
+                right: 0;
+            }
+        }
+        
+        @media screen and (max-width: 576px) {
+            .hero__vector {
+                display: none;
+            }
+        }
+        
+        .hero__text {
+            position: relative;
+        }
+        
+        .hero__text--content {
+            position: relative;
+            margin-left: 8.5rem;
+            margin-bottom: 1.865rem;
+        }
+        
+        @media screen and (max-width: 992px) {
+            .hero__text--content {
+                margin-left: 0;
+            }
+        }
+        
+        .hero__text--content h2 {
+            font-size: 4.375rem;
+            font-weight: 700;
+            line-height: 7rem;
+            color: #fff;
+            margin-bottom: 0;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .hero__text--content h2 {
+                font-size: 3.375rem;
+                line-height: 6rem;
+            }
+        }
+        
+        @media screen and (max-width: 576px) {
+            .hero__text--content h2 {
+                text-align: center;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .hero__text--content h2 {
+                text-align: center;
+            }
+        }
+        
+        @media screen and (max-width: 400px) {
+            .hero__text--content h2 {
+                font-size: 2.375rem;
+                line-height: 4rem;
+            }
+        }
+        
+        .hero__text--content h2 span {
+            background: linear-gradient(42deg, #e9f950 -1.07%, #55f4c4 -1.06%, #bae906 104.1%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: var(--sora);
+        }
+        
+        .hero__text--content h2 em {
+            font-family: var(--playfair);
+            text-decoration: 2px underline;
+        }
+        
+        .hero__text p {
+            max-width: 52.8125rem;
+            margin: auto;
+            text-align: center;
+        }
+        
+        .hero__video {
+            position: absolute;
+            right: 15%;
+            bottom: 6%;
+        }
+        
+        @media screen and (max-width: 1200px) {
+            .hero__video {
+                right: 0;
+            }
+        }
+        
+        @media screen and (max-width: 992px) {
+            .hero__video {
+                right: -3%;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .hero__video {
+                right: -15%;
+            }
+        }
+        
+        @media screen and (max-width: 576px) {
+            .hero__video {
+                position: relative;
+                right: 0;
+                margin-top: 1rem;
+            }
+        }
+        
+        .hero__video .video-img {
+            height: 5rem;
+            width: 14.375rem;
+            position: relative;
+        }
+        
+        .hero__video .video-img::after {
+            position: absolute;
+            height: 105%;
+            width: 101%;
+            content: "";
+            background: var(--btn-bg);
+            top: -2.5px;
+            left: 0;
+            border-radius: 3.125rem;
+            z-index: -1;
+            animation: ripple 2s linear infinite;
+        }
+        
+        @media screen and (max-width: 576px) {
+            .hero__video .video-img {
+                margin: auto;
+            }
+        }
+        
+        .hero__video .video-img img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 3.125rem;
+        }
+        
+        .hero__video .video-img .video-play {
+            position: absolute;
+            background-color: #fff;
+            height: 3.75rem;
+            width: 3.75rem;
+            border-radius: 3.125rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            top: 50%;
+            left: 0.565rem;
+            transform: translateY(-50%);
+            border: 2px solid var(--body-bg);
+        }
+        
+        .hero__video .video-img .video-play i {
+            color: var(--body-bg);
+            font-size: 1.2rem;
+        }
+        
+        .hero__button {
+            margin-top: 3.125rem;
+            text-align: center;
+        }
+        
+        .hero__button:hover span i {
+            transform: rotate(0);
+        }
+        
+        .hero__button:hover a {
+            box-shadow: 0 0 10px 10px #68f2a01a;
+        }
+        
+        /* Pure CSS Slider */
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .slides {
+            position: relative;
+            width: 300%;
+            height: 100%;
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            width: 33.33333%;
+            height: 100%;
+            position: relative;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Keyframes for slider */
+        @keyframes slideshow {
+            0%, 25% {
+                transform: translateX(0);
+            }
+            33%, 58% {
+                transform: translateX(-33.33333%);
+            }
+            66%, 91% {
+                transform: translateX(-66.66666%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadein {
+            0% { opacity: 0; }
+            5% { opacity: 1; }
+            25% { opacity: 1; }
+            30% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        .slides {
+            animation: slideshow 15s infinite;
+        }
+
+        .slide {
+            animation: fadein 15s infinite;
+        }
+
+        .slide:nth-child(2) {
+            animation-delay: 5s;
+        }
+
+        .slide:nth-child(3) {
+            animation-delay: 10s;
+        }
+
+        .slider:hover .slides,
+        .slider:hover .slide {
+            animation-play-state: paused;
+        }
+
+        /* Navigation dots */
+        .slider-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .slider-nav label {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--btn-bg);
+            cursor: pointer;
+            opacity: 0.5;
+            transition: all 0.3s ease;
+        }
+
+        .slider-nav label:hover {
+            opacity: 0.8;
+            transform: scale(1.2);
+        }
+
+        /* Radio buttons */
+        .slider-radio {
+            display: none;
+        }
+
+        #slide1:checked ~ .slides {
+            transform: translateX(0);
+            animation: none;
+        }
+
+        #slide2:checked ~ .slides {
+            transform: translateX(-33.33333%);
+            animation: none;
+        }
+
+        #slide3:checked ~ .slides {
+            transform: translateX(-66.66666%);
+            animation: none;
+        }
+
+        #slide1:checked ~ .slider-nav .nav-1,
+        #slide2:checked ~ .slider-nav .nav-2,
+        #slide3:checked ~ .slider-nav .nav-3 {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        #slide1:checked ~ .slides .slide,
+        #slide2:checked ~ .slides .slide,
+        #slide3:checked ~ .slides .slide {
+            animation: none;
+            opacity: 0;
+        }
+
+        #slide1:checked ~ .slides .slide:first-child,
+        #slide2:checked ~ .slides .slide:nth-child(2),
+        #slide3:checked ~ .slides .slide:last-child {
+            opacity: 1;
+        }
+
+        /* Restored Animations */
+        @keyframes top {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes roundAnim {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Apply animations to SVGs */
+        .hero__vector img:first-child {
+            animation: top 3s linear infinite;
+        }
+
+        .hero__vector img:last-child {
+            animation: roundAnim 10s linear infinite;
+        }
+
+        .hero__text--content img {
+            animation: ripple 2s linear infinite;
+        }
+
+        /* Slider Content Styles */
+        .slider--content {
+            position: absolute;
+            left: 45px;
+            bottom: 80px;
+            background: rgba(13, 12, 28, 0.85);
+            backdrop-filter: blur(8px);
+            padding: 20px 30px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 10;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .slider--content ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .slider--content .user-avatar {
+            position: relative;
+            margin-left: -15px;
+            transition: transform 0.3s ease;
+        }
+
+        .slider--content .user-avatar:first-child {
+            margin-left: 0;
+        }
+
+        .slider--content .user-avatar:hover {
+            transform: translateY(-3px);
+            z-index: 2;
+        }
+
+        .slider--content .user-avatar img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            object-fit: cover;
+        }
+
+        .slider--content .plus-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--Linear-01);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: -15px;
+        }
+
+        .slider--content .plus-icon i {
+            color: var(--body-bg);
+            font-size: 18px;
+        }
+
+        .slider--content .stats {
+            margin-left: 10px;
+            color: #fff;
+            font-family: var(--sora);
+        }
+
+        .slider--content .stats b {
+            font-size: 24px;
+            font-weight: 700;
+            display: block;
+            line-height: 1.2;
+        }
+
+        .slider--content .stats span {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .rounded-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--Linear-01);
+            padding: 18px 30px;
+            border-radius: 50px;
+            color: var(--body-bg);
+            font-weight: 600;
+            font-family: var(--sora);
+            transition: all 0.3s ease-in;
+        }
+        
+        .rounded-btn span {
+            display: inline-block;
+            transition: all 0.3s ease-in;
+        }
+        
+        .rounded-btn span i {
+            transform: rotate(-45deg);
+            transition: all 0.3s ease-in;
+        }
+        
+        .rounded-btn:hover {
+            box-shadow: 0 0 10px 10px #68f2a01a;
+        }
+        
+        .rounded-btn:hover span i {
+            transform: rotate(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section Start -->
+    <div class="hero pt-100 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="hero__text">
+                        <div class="hero__vector">
+                            <img src="../assets/img/animated-icon/graph.png" alt="graph" class="animate-top">
+                            <img src="../assets/img/animated-icon/star-icon.png" alt="graph" class="animate-roundAnim">
+                        </div>
+                        <div class="hero__text--content relative">
+                            <h2>
+                                <span>ItEthik |</span> An IT <br> <img src="../assets/img/animated-icon/star.png"
+                                    alt="graph">
+                                Ethinicity.
+                            </h2>
+                            <div class="hero__video" data-sal="slide-left" data-sal-delay="400"
+                                data-sal-easing="ease-out-back">
+                                <div class="video-img">
+                                    <img src="BOOK NOW" alt="">
+                                    <div class="video-play" data-video-id="u31qwQUeGuM"><i
+                                            class="fas fa-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>Your Trusted Expert for Comprehensive Tech Solutions! Specializing in computer repairs,
+                            laptop/Mac services, CCTV installations, intercom systems, biometric security, server
+                            maintenance, and professional web development. We deliver reliable, fast, and professional
+                            support to keep your devices, systems, and online presence running smoothly. Contact us
+                            today for expert assistance!
+                        </p>
+                        <div class="hero__button">
+                            <a href="#" class="rounded-btn">Recent Projects<span><i
+                                        class="fas fa-arrow-right-long"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hero area end -->
+
+    <!-- Pure CSS Slider -->
+    <div class="hero-slider">
+        <div class="container">
+            <div class="slider">
+                <input type="radio" name="slider" id="slide1" class="slider-radio" checked>
+                <input type="radio" name="slider" id="slide2" class="slider-radio">
+                <input type="radio" name="slider" id="slide3" class="slider-radio">
+                
+                <div class="slides">
+                    <div class="slide">
+                        <img src="../assets/img/hero/happy-business-couple-working-computer-while-sitting-cafe.jpg" alt="Business">
+                        <div class="slider--content">
+                            <div class="user-avatars">
+                                <div class="user-avatar">
+                                    <img src="../assets/img/hero/customer-1.jpg" alt="Customer">
+                                </div>
+                                <div class="user-avatar">
+                                    <img src="../assets/img/hero/customer-2.jpg" alt="Customer">
+                                </div>
+                                <div class="plus-icon">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="stats">
+                                <b>1K+</b>
+                                <span>Happy Clients</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="../assets/img/hero/customer-service-cute-guy-grey-suit-with-computer-headset-smiling-showing-good-gesture.jpg" alt="Service">
+                        <div class="slider--content">
+                            <div class="user-avatars">
+                                <div class="user-avatar">
+                                    <img src="../assets/img/hero/customer-1.jpg" alt="Customer">
+                                </div>
+                                <div class="user-avatar">
+                                    <img src="../assets/img/hero/customer-2.jpg" alt="Customer">
+                                </div>
+                                <div class="plus-icon">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="stats">
+                                <b>2K+</b>
+                                <span>Downloads</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="../assets/img/hero/modern-equipped-computer-lab.jpg" alt="Lab">
+                        <div class="slider--content">
+                            <div class="user-avatars">
+                                <div class="user-avatar">
+                                    <img src="../assets/img/hero/customer-1.jpg" alt="Customer">
+                                </div>
+                                <div class="user-avatar">
+                                    <img src="../assets/img/hero/customer-2.jpg" alt="Customer">
+                                </div>
+                                <div class="plus-icon">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="stats">
+                                <b>20+</b>
+                                <span>Projects Running</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-nav">
+                    <label for="slide1" class="nav-1"></label>
+                    <label for="slide2" class="nav-2"></label>
+                    <label for="slide3" class="nav-3"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/kursor.js"></script>
+    <script>
+        // Initialize Kursor
+        new kursor({
+            type: 1,
+            removeDefaultCursor: true,
+            color: '#fff'
+        });
+
+        // Initialize theme
+        if (!('theme' in localStorage)) {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+        } else if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</body>
+</html>
